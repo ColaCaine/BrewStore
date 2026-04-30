@@ -1,4 +1,4 @@
-BrewKit is a toolkit app for using Brew
+BrewStore is an app store for MacOS using Brew
 
 It provides a library of essential applications and tools, installable via brew.
 
@@ -7,4 +7,4 @@ It provides a library of essential applications and tools, installable via brew.
    easier, providing a larger appstore alternative, with many linux 
    based applications.
 
-[Install via the official website.](https://colacaine.github.io/BrewKit)
+[Install via the official website.](https://colacaine.github.io/BrewStore)

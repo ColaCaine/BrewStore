@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BrewKit</title>
+        <style>
+            body, html {
+                background-color: rgb(33, 33, 33);
+                margin: 0;
+                padding: 0;
+            }
+            html {
+                overflow-x: hidden;
+            }
+          
+            p, h1, h2, h3, h4, pre, a {
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+            }
+
+            .welcome-container {
+                background-color: black;
+                border-radius: 10px;
+                width: fit-content;
+                padding: 0 20px; 
+                margin: 50px auto; 
+            }
+            h1 {
+                text-align: center;
+                font-size: 100px;
+                line-height: 1.05; 
+                margin-top: 10px; 
+                margin-bottom: -10px; 
+            }
+            #downloadBtn {
+                display: block;
+                margin: 20px auto;
+                padding: 10px 20px;
+                font-size: 18px;
+                color: white;
+                background-color: #5d5d5d;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: -15px;
+            }
+            #downloadBtn:hover {
+                background-color: #7a7a7a;
+            }
+            body {
+                margin-top: 17%;
+                margin-bottom: 17%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="welcome-container">
+            <h1 style="text-align: center; margin-top: 0.5em; margin-bottom: -28px; font-size: 100px;">BrewKit</h1>
+            <h4 style="text-align: center; padding-bottom: 15px;">The ultimate app store for MacOS</h4>
+        </div>
+        <button id="downloadBtn">Install</button>
+<script>
+  document.getElementById('downloadBtn').addEventListener('click', function() {
+    const fileUrl = 'resources/BrewKit.dmg';
+    const fileName = 'BrewKit.dmg';
+
+    // Create a hidden link element
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = fileName;
+
+    // Append to body, click it, and remove it
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+</script>
+<script>
+</script>
+    </body>
+</html>

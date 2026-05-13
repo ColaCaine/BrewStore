@@ -1,80 +1,140 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>BrewStore</title>
-        <style>
-            body, html {
-                background-color: rgb(33, 33, 33);
-                margin: 0;
-                padding: 0;
-            }
-            html {
-                overflow-x: hidden;
-            }
-          
-            p, h1, h2, h3, h4, pre, a {
-                font-family: Arial, Helvetica, sans-serif;
-                color: white;
-            }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewStore | The Future of macOS Apps</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
 
-            .welcome-container {
-                background-color: black;
-                border-radius: 10px;
-                width: fit-content;
-                padding: 0 20px; 
-                margin: 50px auto; 
-            }
-            h1 {
-                text-align: center;
-                font-size: 100px;
-                line-height: 1.05; 
-                margin-top: 10px; 
-                margin-bottom: -10px; 
-            }
-            #downloadBtn {
-                display: block;
-                margin: 20px auto;
-                padding: 10px 20px;
-                font-size: 18px;
-                color: white;
-                background-color: #5d5d5d;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                margin-top: -15px;
-            }
-            #downloadBtn:hover {
-                background-color: #7a7a7a;
-            }
-            body {
-                margin-top: 17%;
-                margin-bottom: 17%;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="welcome-container">
-            <h1 style="text-align: center; margin-top: 0.5em; margin-bottom: -28px; font-size: 100px;">BrewStore</h1>
-            <h4 style="text-align: center; padding-bottom: 15px;">The ultimate app store for MacOS</h4>
-        </div>
-        <button id="downloadBtn">Install</button>
-<script>
-  document.getElementById('downloadBtn').addEventListener('click', function() {
-    const fileUrl = 'https://github.com/ColaCaine/BrewStore/releases/download/v2.0.1/BrewStore.dmg';
-    const fileName = 'BrewStore_2.0.1.dmg';
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+            overflow: hidden;
+            
+            /* Single, Unified Futuristic Gradient */
+            background: radial-gradient(circle at top left, #1a1a2e 0%, #0f0f0f 50%, #000000 100%);
+        }
 
-    // Create a hidden link element
-    const link = document.createElement('a');
-    link.href = fileUrl;
-    link.download = fileName;
+        /* Sleek GitHub Button */
+        .github-link {
+            position: fixed;
+            top: 40px;
+            right: 40px;
+            z-index: 100;
+            opacity: 0.5;
+            transition: all 0.4s ease;
+        }
 
-    // Append to body, click it, and remove it
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
-</script>
-<script>
-</script>
-    </body>
+        .github-link:hover {
+            opacity: 1;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .github-icon {
+            fill: white;
+            width: 28px;
+            height: 28px;
+        }
+
+        /* The "Glass" Card - No separate background color, just blur and border */
+        .glass-pane {
+            text-align: center;
+            padding: 40px;
+            border-radius: 40px;
+            /* This makes the card feel like it's part of the background */
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            
+            animation: slideUp 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        h1 {
+            font-size: clamp(60px, 10vw, 110px);
+            font-weight: 800;
+            letter-spacing: -4px;
+            margin: 0;
+            /* High-end silver metallic gradient */
+            background: linear-gradient(180deg, #ffffff 30%, #444444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 10px 0 40px 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Minimalist Button */
+        #downloadBtn {
+            padding: 18px 50px;
+            font-size: 16px;
+            font-weight: 600;
+            color: black;
+            background: white;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        #downloadBtn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.15);
+            letter-spacing: 1px;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* Responsive scaling */
+        @media (max-width: 768px) {
+            .glass-pane { width: 90%; padding: 30px; }
+            h1 { letter-spacing: -2px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://github.com/ColaCaine/BrewStore" class="github-link" target="_blank">
+        <svg class="github-icon" viewBox="0 0 16 16"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+    </a>
+
+    <div class="glass-pane">
+        <h1>BrewStore</h1>
+        <h4>The Ultimate MacOS App Store</h4>
+        <button id="downloadBtn">Install Latest</button>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const fileUrl = 'https://github.com/ColaCaine/BrewStore/releases/download/v2.0.1/BrewStore.dmg';
+            const fileName = 'BrewStore_2.0.1.dmg';
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
 </html>

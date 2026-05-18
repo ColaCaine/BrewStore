@@ -12,3 +12,6 @@ It provides a library of essential applications and tools, installable via brew.
 ## Changelog
 * Code has been migrated/translated from Python to C++ for better performance and startup times.
  > Note that the startup times still seem to be slow sometimes due to the slow loading method, as of 5/13/2026, lazy loading is being worked on, and may posibbly release day of, when released it will be logged with date. Lazy loading will load in increments while opened, making it able to open in mere' seconds.
+
+5/18/2026
+Added MacPorts support, however it doesn't yet work due to a permissions issue, additional options have been added such as categories.

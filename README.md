@@ -7,7 +7,7 @@ It provides a library of essential applications and tools, installable via brew.
    easier, providing a larger appstore alternative, with many linux 
    based applications.
 
-[Install via the official website.](https://colacaine.github.io/BrewStore)
+[Install via the official website.](https://brewstore.github.io)
 
 ## Changelog
 * Code has been migrated/translated from Python to C++ for better performance and startup times.

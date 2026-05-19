@@ -23,3 +23,8 @@ It provides a library of essential applications and tools, installable via brew.
 
 5/18/2026
 Added MacPorts support, however it doesn't yet work due to a permissions issue, additional options have been added such as categories.
+
+## Known Issues
+
+* We are aware of an issue in which closing the application gives a post-close (cmd+q) popup saying it closed unexpectedly, we are working to fix it, it is quite annoying, though doesn't harm app functionality and is a harmless error.
+* We are also working to fix the MacPorts permissions problem.

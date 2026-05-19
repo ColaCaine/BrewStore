@@ -1,3 +1,4 @@
+# BrewStore
 BrewStore is an app store for MacOS using Brew
 
 It provides a library of essential applications and tools, installable via brew.
@@ -8,6 +9,13 @@ It provides a library of essential applications and tools, installable via brew.
    based applications.
 
 [Install via the official website.](https://brewstore.github.io)
+
+## Website Mirrors List
+* [brewstore-eight.vercel.app](https://brewstore-eight.vercel.app)
+* [brewstore.pages.dev](https://brewstore.pages.dev)
+* [brewstore.puter.site](https://brewstore.puter.site)
+* [brewstore.github.io](https://brewstore.github.io)
+  
 
 ## Changelog
 * Code has been migrated/translated from Python to C++ for better performance and startup times.

@@ -27,4 +27,5 @@ Added MacPorts support, however it doesn't yet work due to a permissions issue, 
 ## Known Issues
 
 * We are aware of an issue in which closing the application gives a post-close (cmd+q) popup saying it closed unexpectedly, we are working to fix it, it is quite annoying, though doesn't harm app functionality and is a harmless error.
+
 * We are also working to fix the MacPorts permissions problem.

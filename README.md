@@ -24,8 +24,11 @@ App startup is now instantaneous.
 v2.0.2
 Added MacPorts support, however it doesn't yet work due to a permissions issue, additional options have been added such as categories.
 ```
+```
+5/19/2026
+v2.0.3
+Fixed the error saying closed unexpectedly after quitting the app, now it will only happen if you quit while it is loading.
+```
 ## Known Issues
 
-* We are aware of an issue in which closing the application gives a post-close (cmd+q) popup saying it closed unexpectedly, we are working to fix it, it is quite annoying, though doesn't harm app functionality and is a harmless error.
-
-* We are also working to fix the MacPorts permissions problem.
+* MacPorts has a permissions issue.

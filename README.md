@@ -1,4 +1,5 @@
-# BrewStore
+# BrewStore <img width="1024" height="1024" alt="brewstore-logo-iteration-2" src="https://github.com/user-attachments/assets/8ac0fe02-47db-47cc-b077-4831824c5c37" />
+
 BrewStore is an app store for MacOS using Brew, it provides a library of essential applications and tools, installable via brew. Essentially; an appstore via brew helping you find applications easier, providing a larger appstore alternative, with many linux based applications.
 
 [Install via the official website.](https://brewstore.github.io)

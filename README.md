@@ -4,9 +4,7 @@ BrewStore is an app store for MacOS using Brew
 It provides a library of essential applications and tools, installable via brew.
 
 
--- Essentially; an appstore via brew helping you find applications
-   easier, providing a larger appstore alternative, with many linux 
-   based applications.
+Essentially; an appstore via brew helping you find applications easier, providing a larger appstore alternative, with many linux based applications.
 
 [Install via the official website.](https://brewstore.github.io)
 

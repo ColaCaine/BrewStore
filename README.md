@@ -11,6 +11,8 @@ BrewStore is an app store for MacOS using Brew, it provides a library of essenti
 * [brewstore.puter.site](https://brewstore.puter.site)
 * [brewstore.github.io](https://brewstore.github.io)
   
+## Announcements
+We will soon be replacing the HomeBrew backend with nb (nanobrew), a faster alternative to homebrew, it utilizes homebrew with the same apps and functionality, but runs much faster. [Check out NanoBrew](https://github.com/justrach/nanobrew)
 
 ## Changelog
 
